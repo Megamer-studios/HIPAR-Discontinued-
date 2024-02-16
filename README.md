@@ -1,7 +1,7 @@
 # HIPAR
 (UNFINISHED)
 
-A terminal like system baseon on if statements
+A terminal like system based on if statements
 
 GAME
 
