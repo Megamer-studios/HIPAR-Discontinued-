@@ -7,6 +7,7 @@ namespace HIPAR
         // 1 = first process
         // -1 = GTFO
         // 3 = search
+        // -5 = standart process
         // Arigtonyte
         public Form1()
         {
@@ -45,7 +46,7 @@ namespace HIPAR
         private async void button1_Click(object sender, EventArgs e)
         {
             // STANDARTS --
-            if (prog == 1)
+            if (prog == -5)
             {
                 label2.Text = ("What process would you like to start?");
                 textBox1.Text = ("");
@@ -115,7 +116,7 @@ namespace HIPAR
                     label2.Text = ("Knowledgee on that topic \ndoesn't seem to be on our database. \n Check out The Arigtonyte Framework databse\n for more information on the search process.");
                     textBox1.Text = ("");
 
-                    prog = 1;
+                    prog = -5;
 
 
                 
@@ -129,7 +130,7 @@ namespace HIPAR
             }
             if (label2.Text == ("Knowledgee on that topic \ndoesn't seem to be on our database. \n Check out The Arigtonyte Framework databse\n for more information on the search process."))
             {
-                prog = 1;
+                prog = -5;
             }
             // --
 
