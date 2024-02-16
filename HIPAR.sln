@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HIPAR", "HIPAR\HIPAR.csproj", "{55453227-6B2F-42DF-ADCB-E2902208DAF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55453227-6B2F-42DF-ADCB-E2902208DAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55453227-6B2F-42DF-ADCB-E2902208DAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55453227-6B2F-42DF-ADCB-E2902208DAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55453227-6B2F-42DF-ADCB-E2902208DAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {071236B8-639F-4DFD-9C5A-0C554AE7428B}
+	EndGlobalSection
+EndGlobal
