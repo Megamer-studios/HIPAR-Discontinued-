@@ -1,3 +1,4 @@
+using System.Diagnostics;
 namespace HIPAR
 {
     public partial class Form1 : Form
@@ -51,6 +52,7 @@ namespace HIPAR
                 label2.Text = ("What process would you like to start?");
                 textBox1.Text = ("");
                 prog = 2;
+                label2.ForeColor = Color.Black;
             }
             if (textBox1.Text == ("exit"))
             {
@@ -96,19 +98,7 @@ namespace HIPAR
                 }
 
             }
-            if (prog == 2)
-            {
-                if (textBox1.Text == ("process: search"))
-                {
 
-                    label2.Text = ("What would you like to search for?");
-                    textBox1.Text = ("");
-
-
-
-                }
-
-            }
             if (prog == 3)
             {
 
@@ -122,8 +112,32 @@ namespace HIPAR
                 
 
             }
-            // DELAY MAKERS --
+            if (prog == 4)
+            {
+                if (textBox1.Text == ("nah id win"))
+                {
 
+                    label2.Text = ("*dies*");
+                    textBox1.Text = ("");
+
+
+
+                }
+
+            }
+            // DELAY MAKERS --
+            if (label2.Text == ("HIPAR \r\n(Highly Intelligent Processing Arigtonyte Result).\r\nA Highly intelligent processing system based on\r\nThe Arygtonite Framework\r\n"))
+            {
+                prog = -5;
+            }
+            if (label2.Text == ("https://www.who.int/news-room/fact-sheets/detail/suicide"))
+            {
+                prog = -5;
+            }
+            if (label2.Text == ("*dies*"))
+            {
+                prog = -5;
+            }
             if (label2.Text == ("What would you like to search for?"))
             {
                 prog = 3;
@@ -133,7 +147,63 @@ namespace HIPAR
                 prog = -5;
             }
             // --
+            // Process --
+            if (prog == 2)
+            {
+                if (textBox1.Text == ("process: search"))
+                {
 
+                    label2.Text = ("What would you like to search for?");
+                    textBox1.Text = ("");
+
+
+
+                }
+
+            }
+            if (prog == 2)
+            {
+                if (textBox1.Text == ("process: lobotomy"))
+                {
+                    Process.Start(new ProcessStartInfo { FileName = @"https://www.youtube.com/watch?v=rczDieh3_ng&ab_channel=NewAnime", UseShellExecute = true });
+                    label2.Text = ("THROUGHOUT HEAVENS AND EARTH\nI ALONE AM THE MOST\nINTELLIGENT");
+                    textBox1.Text = ("");
+                    prog = 4;
+
+
+                }
+
+            }
+            if (prog == 2)
+            {
+                if (textBox1.Text == ("process: info"))
+                {
+
+                    label2.Text = ("HIPAR \r\n(Highly Intelligent Processing Arigtonyte Result).\r\nA Highly intelligent processing system based on\r\nThe Arygtonite Framework\r\n");
+                    textBox1.Text = ("");
+
+
+
+                }
+
+            }
+                        if (prog == 2)
+            {
+                if (textBox1.Text == ("process: hisui"))
+                {
+                    Process.Start(new ProcessStartInfo { FileName = @"https://www.who.int/news-room/fact-sheets/detail/suicide", UseShellExecute = true });
+   
+                    label2.Text = ("https://www.who.int/news-room/fact-sheets/detail/suicide");
+                    textBox1.Text = ("");
+                    label2.ForeColor = Color.Blue;
+
+
+
+                }
+
+            }
+
+            // --
         }
     }
 }
