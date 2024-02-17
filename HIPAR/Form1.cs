@@ -53,6 +53,7 @@ namespace HIPAR
                 textBox1.Text = ("");
                 prog = 2;
                 label2.ForeColor = Color.Black;
+                label2.BackColor = Color.DimGray;
             }
             if (textBox1.Text == ("exit"))
             {
@@ -126,6 +127,10 @@ namespace HIPAR
 
             }
             // DELAY MAKERS --
+            if (label2.Text == ("Follow your heart.\n And you'll find\n What's right."))
+            {
+                prog = -5;
+            }
             if (label2.Text == ("HIPAR \r\n(Highly Intelligent Processing Arigtonyte Result).\r\nA Highly intelligent processing system based on\r\nThe Arygtonite Framework\r\n"))
             {
                 prog = -5;
@@ -196,6 +201,22 @@ namespace HIPAR
                     label2.Text = ("https://www.who.int/news-room/fact-sheets/detail/suicide");
                     textBox1.Text = ("");
                     label2.ForeColor = Color.Blue;
+
+
+
+                }
+
+            }
+            if (prog == 2)
+            {
+                if (textBox1.Text == ("process: knowledge"))
+                {
+                    Process.Start(new ProcessStartInfo { FileName = @"https://rezero.fandom.com/wiki/Rem", UseShellExecute = true });
+
+                    label2.Text = ("Follow your heart,\nAnd you'll find,\nWhat's right,");
+                    textBox1.Text = ("");
+                    label2.ForeColor = Color.Aqua;
+                    label2.BackColor = Color.Blue;
 
 
 
