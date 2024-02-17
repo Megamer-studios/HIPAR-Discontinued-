@@ -32,6 +32,7 @@
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
+            openFileDialog1 = new OpenFileDialog();
             SuspendLayout();
             // 
             // textBox1
@@ -78,6 +79,10 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -104,5 +109,6 @@
         private Label label1;
         private Label label2;
         private Button button1;
+        private OpenFileDialog openFileDialog1;
     }
 }

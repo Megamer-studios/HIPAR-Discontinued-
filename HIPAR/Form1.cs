@@ -75,7 +75,7 @@ namespace HIPAR
             // --
             if (prog == 1)
             {
-                if (textBox1.Text == ("Y") || textBox1.Text  == ("y"))
+                if (textBox1.Text == ("Y") || textBox1.Text == ("y"))
                 {
 
                     label2.Text = ("What process would you like to start?");
@@ -104,13 +104,13 @@ namespace HIPAR
             {
 
 
-                    label2.Text = ("Knowledgee on that topic \ndoesn't seem to be on our database. \n Check out The Arigtonyte Framework databse\n for more information on the search process.");
-                    textBox1.Text = ("");
+                label2.Text = ("Knowledgee on that topic \ndoesn't seem to be on our database. \n Check out The Arigtonyte Framework databse\n for more information on the search process.");
+                textBox1.Text = ("");
 
-                    prog = -5;
+                prog = -5;
 
 
-                
+
 
             }
             if (prog == 4)
@@ -192,12 +192,12 @@ namespace HIPAR
                 }
 
             }
-                        if (prog == 2)
+            if (prog == 2)
             {
                 if (textBox1.Text == ("process: hisui"))
                 {
                     Process.Start(new ProcessStartInfo { FileName = @"https://www.who.int/news-room/fact-sheets/detail/suicide", UseShellExecute = true });
-   
+
                     label2.Text = ("https://www.who.int/news-room/fact-sheets/detail/suicide");
                     textBox1.Text = ("");
                     label2.ForeColor = Color.Blue;
@@ -223,8 +223,20 @@ namespace HIPAR
                 }
 
             }
+            if (prog == 2)
+            {
+                if (textBox1.Text == ("process: directory"))
+                {
+                    openFileDialog1.ShowDialog();
+                    label2.Text = ("Directory loaded");
+                    textBox1.Text = ("");
 
-            // --
+
+
+                }
+
+                // --
+            }
         }
     }
 }
