@@ -3,7 +3,10 @@ namespace HIPAR
 {
     public partial class Form1 : Form
     {
+        
+        
         int prog = 0;
+        int REM = 0;
         // 0 = basic
         // 1 = first process
         // -1 = GTFO
@@ -14,6 +17,8 @@ namespace HIPAR
         {
             InitializeComponent();
         }
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -46,6 +51,12 @@ namespace HIPAR
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == ("NYA"))
+            {
+                Form2 newForm = new Form2();
+                this.Hide();
+                newForm.Show();
+            }
             // STANDARTS --
             if (prog == -5)
             {
@@ -73,6 +84,8 @@ namespace HIPAR
                 }
             }
             // --
+            // YN --
+            // YN1--
             if (prog == 1)
             {
                 if (textBox1.Text == ("Y") || textBox1.Text == ("y"))
@@ -99,7 +112,34 @@ namespace HIPAR
                 }
 
             }
+            // YN2--
+            if (prog == 7)
+            {
+                if (textBox1.Text == ("Y") || textBox1.Text == ("y"))
+                {
 
+                    label2.Text = ("Great");
+                    textBox1.Text = ("");
+                    prog = 9;
+
+
+                }
+
+            }
+            if (prog == 7)
+            {
+                if (textBox1.Text == ("N") || textBox1.Text == ("n"))
+                {
+
+                    label2.Text = ("Now that's very rude isn't it :( ?");
+                    textBox1.Text = ("");
+                    prog = 8;
+
+
+                }
+
+            }
+// --
             if (prog == 3)
             {
 
@@ -127,6 +167,10 @@ namespace HIPAR
 
             }
             // DELAY MAKERS --
+            if (label2.Text == ("Directory loaded"))
+            {
+                prog = -5;
+            }
             if (label2.Text == ("Follow your heart.\n And you'll find\n What's right."))
             {
                 prog = -5;
@@ -152,91 +196,104 @@ namespace HIPAR
                 prog = -5;
             }
             // --
+            // progress --
+            if (REM == 5)
+            {
+                label2.Text = ("Hey there! It seems that\nYou have been enojoying\nHIPAR for a long time.\n\nWould you like to take a quiz?\n(Y/N)");
+                prog = 7;
+            }
+            // --
             // Process --
-            if (prog == 2)
+            if (REM < 5)
             {
-                if (textBox1.Text == ("process: search"))
+                if (prog == 2)
                 {
+                    if (textBox1.Text == ("process: search"))
+                    {
 
-                    label2.Text = ("What would you like to search for?");
-                    textBox1.Text = ("");
+                        label2.Text = ("What would you like to search for?");
+                        textBox1.Text = ("");
+                        REM += 1;
 
 
+                    }
 
                 }
-
             }
-            if (prog == 2)
-            {
-                if (textBox1.Text == ("process: lobotomy"))
-                {
-                    Process.Start(new ProcessStartInfo { FileName = @"https://www.youtube.com/watch?v=rczDieh3_ng&ab_channel=NewAnime", UseShellExecute = true });
-                    label2.Text = ("THROUGHOUT HEAVENS AND EARTH\nI ALONE AM THE MOST\nINTELLIGENT");
-                    textBox1.Text = ("");
-                    prog = 4;
 
+            if (REM < 5)
+            {
+                if (prog == 2)
+                {
+                    if (textBox1.Text == ("process: info"))
+                    {
+
+                        label2.Text = ("HIPAR \r\n(Highly Intelligent Processing Arigtonyte Result).\r\nA Highly intelligent processing system based on\r\nThe Arygtonite Framework\r\n");
+                        textBox1.Text = ("");
+                        REM += 1;
+
+
+                    }
 
                 }
-
             }
-            if (prog == 2)
+
+            if (REM < 5)
             {
-                if (textBox1.Text == ("process: info"))
+                if (prog == 2)
                 {
+                    if (textBox1.Text == ("process: hisui"))
+                    {
+                        Process.Start(new ProcessStartInfo { FileName = @"https://www.who.int/news-room/fact-sheets/detail/suicide", UseShellExecute = true });
 
-                    label2.Text = ("HIPAR \r\n(Highly Intelligent Processing Arigtonyte Result).\r\nA Highly intelligent processing system based on\r\nThe Arygtonite Framework\r\n");
-                    textBox1.Text = ("");
+                        label2.Text = ("https://www.who.int/news-room/fact-sheets/detail/suicide");
+                        textBox1.Text = ("");
+                        label2.ForeColor = Color.Blue;
+                        REM += 1;
 
 
+                    }
 
                 }
-
             }
-            if (prog == 2)
+            if (REM < 5)
             {
-                if (textBox1.Text == ("process: hisui"))
+                if (prog == 2)
                 {
-                    Process.Start(new ProcessStartInfo { FileName = @"https://www.who.int/news-room/fact-sheets/detail/suicide", UseShellExecute = true });
+                    if (textBox1.Text == ("process: knowledge"))
+                    {
+                        Process.Start(new ProcessStartInfo { FileName = @"https://rezero.fandom.com/wiki/Rem", UseShellExecute = true });
 
-                    label2.Text = ("https://www.who.int/news-room/fact-sheets/detail/suicide");
-                    textBox1.Text = ("");
-                    label2.ForeColor = Color.Blue;
+                        label2.Text = ("Follow your heart,\nAnd you'll find,\nWhat's right,");
+                        textBox1.Text = ("");
+                        label2.ForeColor = Color.Aqua;
+                        label2.BackColor = Color.Blue;
+                        REM += 1;
 
 
+                    }
 
                 }
-
             }
-            if (prog == 2)
+            if (REM < 5)
             {
-                if (textBox1.Text == ("process: knowledge"))
+                if (prog == 2)
                 {
-                    Process.Start(new ProcessStartInfo { FileName = @"https://rezero.fandom.com/wiki/Rem", UseShellExecute = true });
+                    if (textBox1.Text == ("process: directory"))
+                    {
+                        openFileDialog1.ShowDialog();
+                        label2.Text = ("Directory loaded");
+                        textBox1.Text = ("");
+                        REM += 1;
 
-                    label2.Text = ("Follow your heart,\nAnd you'll find,\nWhat's right,");
-                    textBox1.Text = ("");
-                    label2.ForeColor = Color.Aqua;
-                    label2.BackColor = Color.Blue;
 
-
+                    }
 
                 }
-
-            }
-            if (prog == 2)
-            {
-                if (textBox1.Text == ("process: directory"))
-                {
-                    openFileDialog1.ShowDialog();
-                    label2.Text = ("Directory loaded");
-                    textBox1.Text = ("");
-
-
-
-                }
-
-                // --
             }
         }
+          
+            // --
+        }
     }
-}
+
