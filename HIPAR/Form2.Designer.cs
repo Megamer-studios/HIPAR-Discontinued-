@@ -57,6 +57,7 @@
             label1.Size = new Size(682, 30);
             label1.TabIndex = 5;
             label1.Text = "1) How is your experience with HIPAR so far? \r\nRate from 1 to 10.";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
