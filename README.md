@@ -1,4 +1,5 @@
 # HIPAR
+Discontinued
 (UNFINISHED)
 
 A terminal like system based on if statements
